@@ -1,0 +1,11 @@
+{
+  "name": "sebastienthuin_3_08072021",
+  "version": "1.0.0",
+  "description": "Projet 3 - Développeur web OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass ./sass/main.scss:./public/css/style.css --watch"
+  },
+  "author": "Sébastien Thuin",
+  "license": "ISC"
+}
