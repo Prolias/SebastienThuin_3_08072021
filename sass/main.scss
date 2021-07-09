@@ -1,1 +1,11 @@
-@import 'utilities/variables';
+@import 
+  'utilities/variables';
+
+@import 
+  'base/base',
+  'base/fonts',
+  'base/typography';
+
+@import 
+  'layout/header',
+  'layout/footer';
