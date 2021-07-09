@@ -1,11 +1,17 @@
 @import 
-  'utilities/variables';
+  'utilities/variables',
+  'utilities/mixins';
 
 @import 
   'base/base',
   'base/fonts',
   'base/typography';
 
+@import
+  'components/btn';
+
 @import 
   'layout/header',
+  'layout/localisation',
+  'layout/description',
   'layout/footer';
