@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: #ffffff;
+  padding-left: 1.5em;
+  padding-bottom: 2em;
+  &__logo {
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.25em;
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    a {
+      color: #ffffff;
+      padding-bottom: .5em;
+      i {
+        width: 1.5em;
+      }
+    }
+  }
+}
