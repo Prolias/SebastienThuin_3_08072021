@@ -1,0 +1,39 @@
+.chips {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: hsl(0, 0%, 96%);
+  padding: 1.5em;
+  margin-bottom: 1em;
+  border-radius: 1em;
+  position: relative;
+  &__num {
+    position: absolute;
+    left: -.7em;
+    top: 1.5em;
+    background-color: $primary-color;
+    color: $white;
+    padding: .5em;
+    border-radius: 50%;
+    width: .7em;
+    height: .7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__icon {
+    color: hsl(0,0%, 50%);
+    margin-left: .5em;
+    margin-right: 1em;
+    i {
+      font-size: 1.3em;
+      width: 1.2em;
+    }
+    &.icon--primary {
+      color: $primary-color;
+    }
+  }
+  &__text {
+    font-weight: 700;
+  }
+}
