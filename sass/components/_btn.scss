@@ -1,5 +1,5 @@
 .btn {
-  background-color: $primary-color;
+  background-image: linear-gradient(to bottom right, $secondary-color, $primary-color);
   color: $white;
   padding: 1em;
   border-radius: 25px;

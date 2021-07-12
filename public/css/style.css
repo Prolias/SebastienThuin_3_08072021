@@ -15,7 +15,7 @@ body {
 }
 
 .btn {
-  background-color: #9356DC;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: #FFFFFF;
   padding: 1em;
   border-radius: 25px;
