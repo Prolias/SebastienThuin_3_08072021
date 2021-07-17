@@ -14,9 +14,75 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.btn {
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: #FFFFFF;
+  padding: 1em;
+  border-radius: 25px;
+  box-shadow: 0.2em 0.5em 0.5em 0 #cccccc;
+}
+
 .header {
   display: flex;
   justify-content: center;
+  padding: 1em;
+}
+
+.localisation {
+  background-color: #eaeaea;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 1em 0.5em -1.2em #000;
+}
+.localisation__icon {
+  padding-right: 1em;
+}
+
+.description {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+.description__title {
+  margin: 0;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.description .btn {
+  margin-top: 1em;
+}
+
+.fonctionnement {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+.fonctionnement__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurants {
+  background-color: #f2f2f2;
+  padding: 2em 1em 3em;
+}
+.restaurants__list {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .restaurants__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .footer {
@@ -42,6 +108,106 @@ body {
 }
 .footer__links a i {
   width: 1.5em;
+}
+
+.cards {
+  background-color: #FFFFFF;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.2em 0.5em 0.5em 0 #e6e6e6;
+  border-radius: 15px;
+}
+@media screen and (min-width: 768px) {
+  .cards {
+    width: 300px;
+  }
+}
+.cards__media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-height: 200px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+}
+.cards__media img {
+  object-fit: cover;
+  object-position: center center;
+  max-width: 100%;
+}
+.cards__new {
+  position: absolute;
+  background-color: #99E2D0;
+  padding: 0.4em 1em;
+  top: 1em;
+  right: 1em;
+  border-radius: 5%;
+  color: #1b6150;
+  font-weight: 500;
+}
+.cards__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+.cards__main {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1em;
+}
+.cards__nom {
+  padding-bottom: 0.3em;
+  font-weight: 700;
+}
+.cards__like {
+  border: 1px solid black;
+  display: flex;
+}
+.cards__like i {
+  font-size: 50px;
+}
+
+.chips {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: whitesmoke;
+  padding: 1.5em;
+  margin-bottom: 1.2em;
+  border-radius: 1em;
+  position: relative;
+  box-shadow: 0.2em 0.5em 0.5em 0 #d9d9d9;
+}
+.chips__num {
+  position: absolute;
+  left: -0.7em;
+  top: 1.25em;
+  background-color: #9356DC;
+  color: #FFFFFF;
+  padding: 0.5em;
+  border-radius: 50%;
+  width: 0.7em;
+  height: 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chips__icon {
+  color: gray;
+  margin-left: 0.5em;
+  margin-right: 1em;
+}
+.chips__icon i {
+  font-size: 1.3em;
+  width: 1.2em;
+}
+.chips__icon.icon--primary {
+  color: #9356DC;
+}
+.chips__text {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */

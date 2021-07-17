@@ -1,11 +1,21 @@
 @import 
-  'utilities/variables';
+  'utilities/variables',
+  'utilities/mixins';
 
 @import 
   'base/base',
   'base/fonts',
   'base/typography';
 
+@import
+  'components/btn';
+
 @import 
   'layout/header',
-  'layout/footer';
+  'layout/localisation',
+  'layout/description',
+  'layout/fonctionnement',
+  'layout/restaurants',
+  'layout/footer',
+  'layout/cards',
+  'layout/chips';
