@@ -23,9 +23,17 @@ body {
 }
 
 .header {
+  position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 1em;
+}
+.header__previous {
+  position: absolute;
+  display: flex;
+  left: 1em;
+  font-size: 1.3em;
 }
 
 .localisation {
@@ -83,6 +91,26 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
   }
+}
+
+.menu {
+  border-radius: 3em 3em 0 0;
+  background-color: #f2f2f2;
+  width: 100%;
+}
+.menu__title {
+  display: flex;
+  align-items: center;
+  font-family: "Shrikhand", cursive;
+  position: relative;
+  padding: 1.3em 1em;
+}
+.menu__title i {
+  position: absolute;
+  right: 1.5em;
+}
+.menu__list {
+  margin: auto 1em;
 }
 
 .footer {
@@ -167,6 +195,52 @@ body {
 }
 .cards__like i {
   font-size: 50px;
+}
+
+.cards-choix {
+  background-color: #FFFFFF;
+  display: flex;
+  align-content: stretch;
+  margin: 1em auto;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0.2em 0.5em 0.5em 0 #e6e6e6;
+}
+.cards-choix__main {
+  position: relative;
+  display: flex;
+  padding: 1em;
+  flex-grow: 1;
+}
+.cards-choix__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.cards-choix__nom {
+  font-weight: 700;
+  margin-bottom: 0.3em;
+}
+.cards-choix__desc {
+  font-weight: 400;
+}
+.cards-choix__prix {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-weight: 500;
+}
+.cards-choix:hover .cards-choix__check {
+  display: flex;
+}
+.cards-choix__check {
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  min-width: 3.5em;
 }
 
 .chips {
