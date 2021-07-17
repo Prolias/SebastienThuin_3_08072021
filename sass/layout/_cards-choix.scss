@@ -1,0 +1,47 @@
+.cards-choix {
+  background-color: $white;
+  display: flex;
+  align-content: stretch;
+  margin: 1em auto;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: .2em .5em .5em 0 hsl(0, 0%, 90%);
+  &__main {
+    position: relative;
+    display: flex;
+    padding: 1em;
+    flex-grow: 1;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  &__nom {
+    font-weight: 700;
+    margin-bottom: .3em;
+  }
+  &__desc {
+    font-weight: 400;
+  }
+  &__prix {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-weight: 500;
+  }
+  &:hover {
+    .cards-choix__check {
+      display: flex;
+    }
+  }
+  &__check {
+    background-color: $tertiary-color;
+    border-radius: 0 15px 15px 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-width: 3.5em;
+  }
+}
