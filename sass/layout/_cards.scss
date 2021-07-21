@@ -47,6 +47,7 @@
     font-weight: 700;
   }
   &__like {
+    z-index: 1;
     border: 1px solid black;
     display: flex;
     i {

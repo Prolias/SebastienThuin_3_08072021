@@ -1,5 +1,13 @@
 .header {
+  position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 1em;
+  &__previous {
+    position: absolute;
+    display: flex;
+    left: 1em;
+    font-size: 1.3em;
+  }
 }
