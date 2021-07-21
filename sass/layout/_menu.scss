@@ -24,5 +24,22 @@
   }
   &__list {
     margin: auto 1em;
+    @include for-size(large) {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+  &__commander {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .btn {
+      padding: 1em 2em;
+    }
+  }
+  &__main {
+    background-color: darken($white, 5%);
   }
 }
