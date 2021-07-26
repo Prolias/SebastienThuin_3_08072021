@@ -244,6 +244,7 @@ body {
   position: relative;
   border-radius: 15px;
   box-shadow: 0.2em 0.5em 0.5em 0 #e6e6e6;
+  animation: fade-in-cards 1s ease-in;
 }
 @media screen and (min-width: 992px) {
   .cards-choix {
@@ -284,6 +285,11 @@ body {
 .cards-choix:hover .cards-choix__check {
   display: flex;
 }
+.cards-choix:hover .cards-choix__check i {
+  color: #FFFFFF;
+  font-size: 1.75em;
+  animation: check-roll 500ms ease;
+}
 .cards-choix__check {
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
@@ -293,6 +299,24 @@ body {
   min-width: 3.5em;
 }
 
+@keyframes fade-in-cards {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes check-roll {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
 .chips {
   display: flex;
   justify-content: flex-start;
