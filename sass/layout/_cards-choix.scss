@@ -45,9 +45,8 @@
   &:hover {
     .cards-choix__check {
       display: flex;
+      animation: check 1s ease forwards;
       i {
-        color: $white;
-        font-size: 1.75em;
         animation: check-roll 500ms ease;
       }
     }
@@ -55,29 +54,45 @@
   &__check {
     background-color: $tertiary-color;
     border-radius: 0 15px 15px 0;
-    display: none;
     justify-content: center;
     align-items: center;
-    min-width: 3.5em;
+    z-index: -1;
+    display: none;
+    overflow: hidden;
+    i {
+      color: $white;
+      font-size: 1.75em;
+    }
   }
 }
 
 @keyframes fade-in-cards {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(100%);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
 @keyframes check-roll {
-  0% {
+  from {
     transform: rotate(0turn);
   }
-  100% {
+  to {
     transform: rotate(1turn);
+  }
+}
+
+@keyframes check {
+  from {
+    z-index: 1;
+    width: 0%;
+  }
+  to {
+    z-index: 1;
+    width: 4.5em;
   }
 }
