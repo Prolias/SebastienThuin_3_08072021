@@ -49,50 +49,39 @@
   &__like {
     font-size: 2em;
     position: relative;
+    &:hover {
+      .far {
+        z-index: 1;
+      }
+      .fas {
+        animation: like-solid 2s ease forwards;
+      }
+    }
     i {
       position: absolute;
       right: 0;
       top: .1em;
     }
     .fas {
-      z-index: 1;
-      opacity: 0;
-      &:hover {
-        animation: like-solid 2s ease forwards;
-      }
+      z-index: 2;
+      background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
     .far {
-      z-index: 1;
-      &:hover {
-        animation: like-regular 2s ease forwards;
-      }
+      z-index: 3;
+      background: $white;
     }
   }
 }
 
 @keyframes like-solid {
   0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  50% {
     opacity: 1;
     transform: scale(0);
   }
   100% {
     transform: scale(1);
-  }
-}
-
-@keyframes like-regular {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  100% {
   }
 }
