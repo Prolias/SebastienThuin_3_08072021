@@ -47,11 +47,14 @@
     font-weight: 700;
   }
   &__like {
-    z-index: 1;
-    border: 1px solid black;
     display: flex;
+    align-items: center;
     i {
-      font-size: 50px;
+      z-index: 10;
+      font-size: 2em;
+      &:hover {
+        color: red;
+      }
     }
   }
 }

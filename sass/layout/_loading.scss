@@ -1,0 +1,44 @@
+.loading {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: loading 3s linear forwards;
+  .spinner {
+    height: 50px;
+    width: 50px;
+    border: 5px solid hsl(0%, 0%, 90%);
+    border-top-color: $primary-color;
+    border-radius: 50%;
+    animation: spinner 1s ease infinite;
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 100%;
+  }
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
