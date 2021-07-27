@@ -189,6 +189,9 @@ body {
     width: 300px;
   }
 }
+.cards:hover {
+  box-shadow: 0.2em 0.5em 0.5em 0 #cccccc;
+}
 .cards__media {
   position: relative;
   display: flex;
@@ -406,6 +409,12 @@ body {
 }
 .chips__text {
   font-weight: 700;
+}
+.chips:hover {
+  box-shadow: 0.2em 0.5em 0.5em 0 #cccccc;
+}
+.chips:hover .chips__icon {
+  color: #9356DC;
 }
 
 .loading {

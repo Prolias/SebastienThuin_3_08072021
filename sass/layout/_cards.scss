@@ -8,6 +8,9 @@
   @include for-size(medium) {
     width: 300px;
   }
+  &:hover {
+    box-shadow: .2em .5em .5em 0 hsl(0, 0%, 80%);
+  }
   &__media {
     position: relative;
     display: flex;
