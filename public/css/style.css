@@ -28,6 +28,7 @@ body {
   box-shadow: 0.2em 0.5em 0.5em 0 #cccccc;
 }
 .btn:hover {
+  box-shadow: 0.2em 0.5em 0.5em 0 #bfbfbf;
   background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
 }
 
@@ -232,9 +233,10 @@ body {
 }
 .cards__like:hover .far {
   z-index: 1;
+  animation: like-regular 75ms ease forwards;
 }
 .cards__like:hover .fas {
-  animation: like-solid 2s ease forwards;
+  animation: like-solid 75ms ease forwards;
 }
 .cards__like i {
   position: absolute;
@@ -255,11 +257,18 @@ body {
 
 @keyframes like-solid {
   0% {
-    opacity: 1;
     transform: scale(0);
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes like-regular {
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 .cards-choix {
