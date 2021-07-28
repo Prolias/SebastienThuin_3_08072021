@@ -354,10 +354,10 @@ body {
 }
 @keyframes check-roll {
   from {
-    transform: rotate(0turn);
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(1turn);
+    transform: rotate(360deg);
   }
 }
 @keyframes check {
