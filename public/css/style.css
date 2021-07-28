@@ -296,6 +296,7 @@ body {
   position: relative;
   border-radius: 15px;
   box-shadow: 0.2em 0.5em 0.5em 0 #e6e6e6;
+  overflow: hidden;
   animation: fade-in-cards 1s ease-in;
 }
 @media screen and (min-width: 992px) {
@@ -336,19 +337,21 @@ body {
 }
 .cards-choix:hover .cards-choix__check {
   display: flex;
-  animation: check 1s ease forwards;
+  margin-right: 0;
 }
 .cards-choix:hover .cards-choix__check i {
-  animation: check-roll 500ms ease;
+  animation: check-roll 700ms ease 200ms;
 }
 .cards-choix__check {
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
   justify-content: center;
   align-items: center;
-  z-index: -1;
-  display: none;
+  display: flex;
   overflow: hidden;
+  width: 4.5em;
+  margin-right: -4.5em;
+  transition: margin-right 1s;
 }
 .cards-choix__check i {
   color: #FFFFFF;
@@ -371,16 +374,6 @@ body {
   }
   to {
     transform: rotate(360deg);
-  }
-}
-@keyframes check {
-  from {
-    z-index: 1;
-    width: 0%;
-  }
-  to {
-    z-index: 1;
-    width: 4.5em;
   }
 }
 .chips {
