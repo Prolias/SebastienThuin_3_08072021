@@ -30,6 +30,21 @@
       flex-wrap: wrap;
     }
   }
+  &__section {
+    h3 {
+      text-transform: uppercase;
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+    }
+    h3::after {
+      content: '';
+      background: $tertiary-color;
+      margin-top: .2em;
+      width: 2.5em;
+      height: .2em;
+    }
+  }
   &__commander {
     margin-top: 3em;
     display: flex;

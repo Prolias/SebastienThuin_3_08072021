@@ -138,6 +138,19 @@ body {
     flex-wrap: wrap;
   }
 }
+.menu__section h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+}
+.menu__section h3::after {
+  content: "";
+  background: #99E2D0;
+  margin-top: 0.2em;
+  width: 2.5em;
+  height: 0.2em;
+}
 .menu__commander {
   margin-top: 3em;
   display: flex;
