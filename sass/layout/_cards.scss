@@ -72,19 +72,21 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      opacity: 0;
     }
     .far {
       z-index: 3;
-      background: $white;
     }
   }
 }
 
 @keyframes like-solid {
   0% {
+    opacity: 1;
     transform: scale(0);
   }
   100% {
+    opacity: 1;
     transform: scale(1);
   }
 }

@@ -117,12 +117,16 @@ body {
   object-fit: cover;
   object-position: center center;
 }
+.menu__header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+}
 .menu__title {
   display: flex;
   align-items: center;
   font-family: "Shrikhand", cursive;
-  position: relative;
-  padding: 1.3em 1em;
 }
 .menu__title i {
   position: absolute;
@@ -162,6 +166,33 @@ body {
 }
 .menu__main {
   background-color: #f2f2f2;
+}
+.menu__like {
+  font-size: 2em;
+  position: relative;
+}
+.menu__like:hover .far {
+  z-index: 1;
+  animation: like-regular 75ms ease forwards;
+}
+.menu__like:hover .fas {
+  animation: like-solid 75ms ease forwards;
+}
+.menu__like i {
+  position: absolute;
+  right: 0;
+  top: 0.65em;
+}
+.menu__like .fas {
+  z-index: 2;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.menu__like .far {
+  z-index: 3;
 }
 
 .footer {
@@ -265,17 +296,19 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  opacity: 0;
 }
 .cards__like .far {
   z-index: 3;
-  background: #FFFFFF;
 }
 
 @keyframes like-solid {
   0% {
+    opacity: 1;
     transform: scale(0);
   }
   100% {
+    opacity: 1;
     transform: scale(1);
   }
 }
@@ -297,7 +330,9 @@ body {
   border-radius: 15px;
   box-shadow: 0.2em 0.5em 0.5em 0 #e6e6e6;
   overflow: hidden;
-  animation: fade-in-cards 1s ease-in;
+  transform: translateY(100%);
+  opacity: 0;
+  animation: fade-in-cards 500ms ease-in forwards;
 }
 @media screen and (min-width: 992px) {
   .cards-choix {
@@ -358,12 +393,50 @@ body {
   font-size: 1.75em;
 }
 
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.25s;
+}
+
+.delay-2 {
+  animation-delay: 0.5s;
+}
+
+.delay-3 {
+  animation-delay: 0.75s;
+}
+
+.delay-4 {
+  animation-delay: 1s;
+}
+
+.delay-5 {
+  animation-delay: 1.25s;
+}
+
+.delay-6 {
+  animation-delay: 1.5s;
+}
+
+.delay-7 {
+  animation-delay: 1.75s;
+}
+
+.delay-8 {
+  animation-delay: 2s;
+}
+
 @keyframes fade-in-cards {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(100%);
   }
-  to {
+  50% {
+    opacity: 0.25;
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
