@@ -8,6 +8,9 @@
   @include for-size(medium) {
     width: 300px;
   }
+  &:hover {
+    box-shadow: .2em .5em .5em 0 hsl(0, 0%, 80%);
+  }
   &__media {
     position: relative;
     display: flex;
@@ -47,11 +50,52 @@
     font-weight: 700;
   }
   &__like {
-    z-index: 1;
-    border: 1px solid black;
-    display: flex;
-    i {
-      font-size: 50px;
+    font-size: 2em;
+    position: relative;
+    &:hover {
+      .far {
+        z-index: 1;
+        animation: like-regular 75ms ease forwards;
+      }
+      .fas {
+        animation: like-solid 75ms ease forwards;
+      }
     }
+    i {
+      position: absolute;
+      right: 0;
+      top: .1em;
+    }
+    .fas {
+      z-index: 2;
+      background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      opacity: 0;
+    }
+    .far {
+      z-index: 3;
+    }
+  }
+}
+
+@keyframes like-solid {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes like-regular {
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

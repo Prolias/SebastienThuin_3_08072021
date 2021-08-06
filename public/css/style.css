@@ -28,6 +28,7 @@ body {
   box-shadow: 0.2em 0.5em 0.5em 0 #cccccc;
 }
 .btn:hover {
+  box-shadow: 0.2em 0.5em 0.5em 0 #bfbfbf;
   background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
 }
 
@@ -46,7 +47,7 @@ body {
 }
 
 .localisation {
-  background-color: #eaeaea;
+  background-color: #e6e6e6;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -58,7 +59,7 @@ body {
 }
 
 .description {
-  background-color: #f6f6f6;
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,12 +117,16 @@ body {
   object-fit: cover;
   object-position: center center;
 }
+.menu__header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+}
 .menu__title {
   display: flex;
   align-items: center;
   font-family: "Shrikhand", cursive;
-  position: relative;
-  padding: 1.3em 1em;
 }
 .menu__title i {
   position: absolute;
@@ -137,6 +142,19 @@ body {
     flex-wrap: wrap;
   }
 }
+.menu__section h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+}
+.menu__section h3::after {
+  content: "";
+  background: #99E2D0;
+  margin-top: 0.2em;
+  width: 2.5em;
+  height: 0.2em;
+}
 .menu__commander {
   margin-top: 3em;
   display: flex;
@@ -149,12 +167,39 @@ body {
 .menu__main {
   background-color: #f2f2f2;
 }
+.menu__like {
+  font-size: 2em;
+  position: relative;
+}
+.menu__like:hover .far {
+  z-index: 1;
+  animation: like-regular 75ms ease forwards;
+}
+.menu__like:hover .fas {
+  animation: like-solid 75ms ease forwards;
+}
+.menu__like i {
+  position: absolute;
+  right: 0;
+  top: 0.65em;
+}
+.menu__like .fas {
+  z-index: 2;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.menu__like .far {
+  z-index: 3;
+}
 
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: #353535;
-  color: #ffffff;
+  background-color: #333333;
+  color: #FFFFFF;
   padding-left: 1.5em;
   padding-bottom: 2em;
 }
@@ -168,7 +213,7 @@ body {
   align-items: flex-start;
 }
 .footer__links a {
-  color: #ffffff;
+  color: #FFFFFF;
   padding-bottom: 0.5em;
 }
 .footer__links a i {
@@ -187,6 +232,9 @@ body {
   .cards {
     width: 300px;
   }
+}
+.cards:hover {
+  box-shadow: 0.2em 0.5em 0.5em 0 #cccccc;
 }
 .cards__media {
   position: relative;
@@ -227,14 +275,51 @@ body {
   font-weight: 700;
 }
 .cards__like {
+  font-size: 2em;
+  position: relative;
+}
+.cards__like:hover .far {
   z-index: 1;
-  border: 1px solid black;
-  display: flex;
+  animation: like-regular 75ms ease forwards;
+}
+.cards__like:hover .fas {
+  animation: like-solid 75ms ease forwards;
 }
 .cards__like i {
-  font-size: 50px;
+  position: absolute;
+  right: 0;
+  top: 0.1em;
+}
+.cards__like .fas {
+  z-index: 2;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.cards__like .far {
+  z-index: 3;
 }
 
+@keyframes like-solid {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes like-regular {
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .cards-choix {
   background-color: #FFFFFF;
   display: flex;
@@ -244,6 +329,10 @@ body {
   position: relative;
   border-radius: 15px;
   box-shadow: 0.2em 0.5em 0.5em 0 #e6e6e6;
+  overflow: hidden;
+  transform: translateY(100%);
+  opacity: 0;
+  animation: fade-in-cards 500ms ease-in forwards;
 }
 @media screen and (min-width: 992px) {
   .cards-choix {
@@ -283,16 +372,83 @@ body {
 }
 .cards-choix:hover .cards-choix__check {
   display: flex;
+  margin-right: 0;
+}
+.cards-choix:hover .cards-choix__check i {
+  animation: check-roll 700ms ease 200ms;
 }
 .cards-choix__check {
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
-  display: none;
   justify-content: center;
   align-items: center;
-  min-width: 3.5em;
+  display: flex;
+  overflow: hidden;
+  width: 4.5em;
+  margin-right: -4.5em;
+  transition: margin-right 1s;
+}
+.cards-choix__check i {
+  color: #FFFFFF;
+  font-size: 1.75em;
 }
 
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.25s;
+}
+
+.delay-2 {
+  animation-delay: 0.5s;
+}
+
+.delay-3 {
+  animation-delay: 0.75s;
+}
+
+.delay-4 {
+  animation-delay: 1s;
+}
+
+.delay-5 {
+  animation-delay: 1.25s;
+}
+
+.delay-6 {
+  animation-delay: 1.5s;
+}
+
+.delay-7 {
+  animation-delay: 1.75s;
+}
+
+.delay-8 {
+  animation-delay: 2s;
+}
+
+@keyframes fade-in-cards {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes check-roll {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .chips {
   display: flex;
   justify-content: flex-start;
@@ -332,6 +488,56 @@ body {
 }
 .chips__text {
   font-weight: 700;
+}
+.chips:hover {
+  box-shadow: 0.2em 0.5em 0.5em 0 #cccccc;
+}
+.chips:hover .chips__icon {
+  color: #9356DC;
+}
+
+.loading {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: loading 3s linear forwards;
+}
+.loading .spinner {
+  height: 50px;
+  width: 50px;
+  border: 5px solid #e6e6e6;
+  border-top-color: #9356DC;
+  border-radius: 50%;
+  animation: spinner 1s ease infinite;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 100%;
+  }
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

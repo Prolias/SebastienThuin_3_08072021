@@ -7,6 +7,10 @@
   position: relative;
   border-radius: 15px;
   box-shadow: .2em .5em .5em 0 hsl(0, 0%, 90%);
+  overflow: hidden;
+  transform: translateY(100%);
+  opacity: 0;
+  animation: fade-in-cards 500ms ease-in forwards;
   @include for-size(large) {
     width: 30em;
   }
@@ -44,14 +48,53 @@
   &:hover {
     .cards-choix__check {
       display: flex;
+      margin-right: 0;
+      i {
+        animation: check-roll 700ms ease 200ms;
+      }
     }
   }
   &__check {
     background-color: $tertiary-color;
     border-radius: 0 15px 15px 0;
-    display: none;
     justify-content: center;
     align-items: center;
-    min-width: 3.5em;
+    display: flex;
+    overflow: hidden;
+    width: 4.5em;
+    margin-right: -4.5em;
+    transition: margin-right 1s;
+    i {
+      color: $white;
+      font-size: 1.75em;
+    }
+  }
+}
+
+@for $i from 0 to 9 {
+  .delay-#{$i} {
+    animation-delay: #{$i/4}s;
+  }
+}
+
+@keyframes fade-in-cards {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .25;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes check-roll {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

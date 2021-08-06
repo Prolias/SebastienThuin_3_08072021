@@ -20,7 +20,7 @@
     <article class="description">
       <h1 class="description__title">Réservez le menu qui vous convient</h1>
       <p class="description__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-      <a href="" class="btn">Explorer nos restaurants</a>
+      <a href="#restaurants" class="btn">Explorer nos restaurants</a>
     </article>
     <article class="fonctionnement">
       <h1 class="fonctionnement__title">Fonctionnement</h1>
@@ -37,12 +37,12 @@
         </div>
         <div class="chips">
           <div class="chips__num">3</div>
-          <div class="chips__icon icon--primary"><i class="fas fa-store"></i></div>
+          <div class="chips__icon"><i class="fas fa-store"></i></div>
           <div class="chips__text">Dégustez au restaurant</div>
         </div>
       </div>
     </article>
-    <article class="restaurants">
+    <article class="restaurants" id="restaurants">
       <h1 class="restaurants__title">
         Restaurants
       </h1>
@@ -59,7 +59,10 @@
               <div class="cards__nom">La palette du goût</div>
               <div class="cards__lieu">Ménilmontant</div>
             </div>
-            <div class="card__like"><i class="far fa-heart"></i></div>
+            <div class="cards__like">
+              <i class="far fa-heart"></i>
+              <i class="fas fa-heart"></i>
+            </div>
           </div>
         </a>
         <a href="./restaurant/2.html" class="cards">
@@ -74,7 +77,10 @@
               <div class="cards__nom">La note enchantée</div>
               <div class="cards__lieu">Charonne</div>
             </div>
-            <div class="card__like"><i class="far fa-heart"></i></div>
+            <div class="cards__like">
+              <i class="far fa-heart"></i>
+              <i class="fas fa-heart"></i>
+            </div>
           </div>
         </a>
         <a href="./restaurant/3.html" class="cards">
@@ -86,7 +92,10 @@
               <div class="cards__nom">À la française</div>
               <div class="cards__lieu">Cité Rouge</div>
             </div>
-            <div class="card__like"><i class="far fa-heart"></i></div>
+            <div class="cards__like">
+              <i class="far fa-heart"></i>
+              <i class="fas fa-heart"></i>
+            </div>
           </div>
         </a>
         <a href="./restaurant/4.html" class="cards">
@@ -98,7 +107,10 @@
               <div class="cards__nom">Le délice des sens</div>
               <div class="cards__lieu">Folie-Méricourt</div>
             </div>
-            <div class="card__like"><i class="far fa-heart"></i></div>
+            <div class="cards__like">
+              <i class="far fa-heart"></i>
+              <i class="fas fa-heart"></i>
+            </div>
           </div>
         </a>
       </div>
@@ -125,5 +137,9 @@
       </a>
     </div>
   </footer>
+  <div class="loading">
+    <div class="spinner"></div>
+    <h5 class="loading__title">Chargement</h5>
+  </div>
 </body>
 </html>

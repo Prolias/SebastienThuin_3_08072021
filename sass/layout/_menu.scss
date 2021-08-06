@@ -11,12 +11,16 @@
     object-fit: cover;
     object-position: center center;
   }
+  &__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+  }
   &__title {
     display: flex;
     align-items: center;
     font-family: 'Shrikhand', cursive;
-    position: relative;
-    padding: 1.3em 1em;
     i {
       position: absolute;
       right: 1.5em;
@@ -30,6 +34,21 @@
       flex-wrap: wrap;
     }
   }
+  &__section {
+    h3 {
+      text-transform: uppercase;
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+    }
+    h3::after {
+      content: '';
+      background: $tertiary-color;
+      margin-top: .2em;
+      width: 2.5em;
+      height: .2em;
+    }
+  }
   &__commander {
     margin-top: 3em;
     display: flex;
@@ -41,5 +60,34 @@
   }
   &__main {
     background-color: darken($white, 5%);
+  }
+  &__like {
+    font-size: 2em;
+    position: relative;
+    &:hover {
+      .far {
+        z-index: 1;
+        animation: like-regular 75ms ease forwards;
+      }
+      .fas {
+        animation: like-solid 75ms ease forwards;
+      }
+    }
+    i {
+      position: absolute;
+      right: 0;
+      top: .65em;
+    }
+    .fas {
+      z-index: 2;
+      background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      opacity: 0;
+    }
+    .far {
+      z-index: 3;
+    }
   }
 }
