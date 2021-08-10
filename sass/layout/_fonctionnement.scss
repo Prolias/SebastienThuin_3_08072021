@@ -5,5 +5,8 @@
   &__list {
     display: flex;
     flex-direction: column;
+    @include for-size(large) {
+      flex-direction: row;
+    }
   }
 }
