@@ -178,10 +178,10 @@ body {
 }
 .menu__like:hover .far {
   z-index: 1;
-  animation: like-regular 75ms ease forwards;
+  animation: like-regular 500ms ease forwards;
 }
 .menu__like:hover .fas {
-  animation: like-solid 75ms ease forwards;
+  animation: like-solid 500ms ease forwards;
 }
 .menu__like i {
   position: absolute;
@@ -285,10 +285,10 @@ body {
 }
 .cards__like:hover .far {
   z-index: 1;
-  animation: like-regular 75ms ease forwards;
+  animation: like-regular 500ms ease forwards;
 }
 .cards__like:hover .fas {
-  animation: like-solid 75ms ease forwards;
+  animation: like-solid 500ms ease forwards;
 }
 .cards__like i {
   position: absolute;
@@ -502,6 +502,7 @@ body {
 }
 .chips:hover {
   box-shadow: 0.2em 0.5em 0.5em 0 #cccccc;
+  background-color: #f2eafb;
 }
 .chips:hover .chips__icon {
   color: #9356DC;

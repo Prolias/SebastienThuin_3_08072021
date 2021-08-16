@@ -55,10 +55,10 @@
     &:hover {
       .far {
         z-index: 1;
-        animation: like-regular 75ms ease forwards;
+        animation: like-regular 500ms ease forwards;
       }
       .fas {
-        animation: like-solid 75ms ease forwards;
+        animation: like-solid 500ms ease forwards;
       }
     }
     i {

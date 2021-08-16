@@ -43,6 +43,7 @@
   }
   &:hover {
     box-shadow: .2em .5em .5em 0 hsl(0, 0%, 80%);
+    background-color: lighten($primary-color, 35%);
     .chips__icon {
       color: $primary-color;
     }
